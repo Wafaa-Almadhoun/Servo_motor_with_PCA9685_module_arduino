@@ -38,8 +38,11 @@ Project is created with:
 ## Connections
 Connection pins:
  1. servo motor rotate from 0 to 90 degrees and back simulated with TINKERCAD circuit  .
+ 2. 
      5V: Power (red) to servo 
+     
      Gnd: Ground (black) to servo
+     
      we attach the servo object to pin 9 in arduino 
  
 ## Block diagram & simulation
