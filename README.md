@@ -27,12 +27,12 @@ Project is created with:
 * AUTODESK TINKERCAD [Open](https://www.tinkercad.com/)
 	
 ## Components required
-1. Arduino ANO
+1. Arduino UNO
 2. 1 servo motors MG995
 3. jumper wirs
 4. 1 potentiometer 10 K ohm 
-5. bettrey  5 volt
-6.breadboard
+5. bettrey  5 volt 
+6. breadboard
 7. PCA9685 module 
 
 ## Connections
