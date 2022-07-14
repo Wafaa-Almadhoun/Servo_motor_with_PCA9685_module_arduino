@@ -13,9 +13,11 @@ electronic path week 2 task
 
 ## Introduction
 This project is to control servo motors using Arduino UNO R3 simulated with TINKERCAD circuit , The servo motor is used in robotics to activate movements, giving the arm to its precise angle , so we used it with several projects like robot arm , spider robot and  robotic vehicle ,We will cover several topics : 👍 
- 1. servo motor rotate from 0 to 180 degrees and back simulated with TINKERCAD circuit  .
+
+
+ 1. servo motor rotate from 0 to 90 degrees and back simulated with TINKERCAD circuit  .
  2. servo motor Controled by using Potentiometer simulated with TINKERCAD circuit .
- 3. servo motor with PCA9685 module rotate from 0 to 180 degrees and back . 
+ 3. servo motor with PCA9685 module rotate from 0 to 90 degrees and back . 
  4. servo motor with PCA9685 module  Controled by using Potentiometer. 
 
 
@@ -35,11 +37,13 @@ Project is created with:
 
 ## Connections
 Connection pins:
- 1. servo motor rotate from 0 to 180 degrees and back simulated with TINKERCAD circuit  .
+ 1. servo motor rotate from 0 to 90 degrees and back simulated with TINKERCAD circuit  .
+     5V: Power (red) to servo 
+     Gnd: Ground (black) to servo
+     we attach the servo object to pin 9 in arduino 
  
-
 ## Block diagram & simulation
-### servo motor rotate from 0 to 180 degrees and back simulated with TINKERCAD circuit . [see here](https://www.tinkercad.com/things/gbEAiV1jBww-task-12-/editel?sharecode=BJKBPih72RmLoE9rHIyFUbfSYzqZ60Z83fKnogQJ0Lg)
+### servo motor rotate from 0 to 90 degrees and back simulated with TINKERCAD circuit . [see here](https://www.tinkercad.com/things/9Hd8sj9JjSr-cool-bigery-uusam/editel)
 
 ![1](https://user-images.githubusercontent.com/64277741/122782880-c02eb000-d2b9-11eb-8eb7-d6fee3be6355.PNG)
 Figure (1): Servo Motor at initial value (0 degree
