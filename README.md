@@ -58,10 +58,15 @@ Connection pins:
   3. servo motor with PCA9685 module rotate from 0 to 90 degrees and to 120 degree 
  
   connected SCL in Ardunio to SCL in PCA9685 
+  
   connected SDA in Ardunio to SDA in PCA9685
+  
   connected GND in Ardunio to GND in PCA9685
+  
   2-pin screw connector at the top for the servo with 5v power supply
+  
   connected 5v in Ardunio to VCC in PCA9685
+  
   connected servo motor to outputs 0 in PCA9685
 
 ## Block diagram & simulation
@@ -149,45 +154,67 @@ void loop() {
 
 
 ### servo motor with PCA9685 module rotate from 0 to 90 degrees and to 120 degree  
-![Untitled Sketch 2_bb](https://user-images.githubusercontent.com/64277741/179158301-654cdd08-4170-4327-a87e-30ed303ab803.png)
+![Untitled Sketch 2_bb](https://user-images.githubusercontent.com/64277741/179159046-d9a5dfe8-6d33-43f3-934e-13ba9179969a.png)
 
 #### The Code 
 The sketch makes use of the Adafruit PWM Servo Driver Library which you will need to install to make this work.  It can be installed from the Library Manager in your Arduino IDE.
 
 #include <Wire.h>
+
 #include <Adafruit_PWMServoDriver.h>
+
 
 Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 
 #define MIN_PULSE_WIDTH 650
+
 #define MAX_PULSE_WIDTH 2350
+
 #define DEFAULT_PULSE_WIDTH 1500
+
 #define FREQUENCY 50
+
 
 int servonum =0;
 
 void setup() 
 { 
+
 Serial.begin(9600);
+
 Serial.println("16 channel Servo test!");
+
 pwm.begin();
+
 pwm.setPWMFreq(FREQUENCY);
+
 }
 int pulseWidth(int angle)
 {
 int pulse_wide, analog_value;
+
 pulse_wide = map(angle, 0, 180, MIN_PULSE_WIDTH, MAX_PULSE_WIDTH);
+
 analog_value = int(float(pulse_wide) / 1000000 * FREQUENCY * 4096);
+
 Serial.println(analog_value);
+
 return analog_value;
+
 }
 
 void loop() {
+
 pwm.setPWM(0, 0, pulseWidth(0));
+
 delay(1000);
+
 pwm.setPWM(0, 0, pulseWidth(90));
+
 delay(500);
+
 pwm.setPWM(0, 0, pulseWidth(120));
+
 delay(1000);
 
 }
