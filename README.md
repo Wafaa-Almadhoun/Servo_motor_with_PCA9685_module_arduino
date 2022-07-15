@@ -37,7 +37,7 @@ Project is created with:
 
 ## Connections
 Connection pins:
- 1. servo motor rotate from 0 to 90 degrees and back simulated with TINKERCAD circuit  .
+### 1. servo motor rotate from 0 to 90 degrees and back simulated with TINKERCAD circuit  .
   
      5V: Power (red) to servo 
      
@@ -45,7 +45,7 @@ Connection pins:
      
      we attach the servo object to pin 9 in arduino 
    
- 2. servo motor Controlled by using Potentiometer simulated with TINKERCAD circuit .
+### 2. servo motor Controlled by using Potentiometer simulated with TINKERCAD circuit .
      5V: Power (red) to servo 
      
      Gnd: Ground (black) to servo
@@ -55,19 +55,19 @@ Connection pins:
      5v: power from Arduino to breadboard to Potentiometer
      
      signal of Potentiometer attach to pin A0 in arduino 
-  3. servo motor with PCA9685 module rotate from 0 to 90 degrees and to 120 degree 
+ ### 3. servo motor with PCA9685 module rotate from 0 to 90 degrees and to 120 degree 
  
-  connected SCL in Ardunio to SCL in PCA9685 
+     connected SCL in Ardunio to SCL in PCA9685 
   
-  connected SDA in Ardunio to SDA in PCA9685
+     connected SDA in Ardunio to SDA in PCA9685
   
-  connected GND in Ardunio to GND in PCA9685
+     connected GND in Ardunio to GND in PCA9685
   
-  2-pin screw connector at the top for the servo with 5v power supply
+     2-pin screw connector at the top for the servo with 5v power supply
   
-  connected 5v in Ardunio to VCC in PCA9685
+     connected 5v in Ardunio to VCC in PCA9685
   
-  connected servo motor to outputs 0 in PCA9685
+     connected servo motor to outputs 0 in PCA9685
 
 ## Block diagram & simulation
 ### 1.servo motor rotate from 0 to 90 degrees and back simulated with TINKERCAD circuit . [see here](https://www.tinkercad.com/things/9Hd8sj9JjSr-servo-motor-rotate-from-0-to-90-degrees/editel)
