@@ -17,7 +17,7 @@ This project is to control servo motors using Arduino UNO R3 simulated with TINK
 
  1. servo motor rotate from 0 to 90 degrees and back simulated with TINKERCAD circuit  .
  2. servo motor Controlled by using Potentiometer simulated with TINKERCAD circuit .
- 3. servo motor with PCA9685 module rotate from 0 to 90 degrees and back . 
+ 3. servo motor with PCA9685 module rotate from 0 to 90 degrees and to 120 degree . 
  4. servo motor with PCA9685 module  Controlled by using Potentiometer. 
 
 
@@ -55,8 +55,15 @@ Connection pins:
      5v: power from Arduino to breadboard to Potentiometer
      
      signal of Potentiometer attach to pin A0 in arduino 
-
+  3. servo motor with PCA9685 module rotate from 0 to 90 degrees and to 120 degree 
  
+  connected SCL in Ardunio to SCL in PCA9685 
+  connected SDA in Ardunio to SDA in PCA9685
+  connected GND in Ardunio to GND in PCA9685
+  2-pin screw connector at the top for the servo with 5v power supply
+  connected 5v in Ardunio to VCC in PCA9685
+  connected servo motor to outputs 0 in PCA9685
+
 ## Block diagram & simulation
 ### 1.servo motor rotate from 0 to 90 degrees and back simulated with TINKERCAD circuit . [see here](https://www.tinkercad.com/things/9Hd8sj9JjSr-servo-motor-rotate-from-0-to-90-degrees/editel)
 ![Cool Bigery-Uusam (3)](https://user-images.githubusercontent.com/64277741/179117203-9ee32234-7d2c-4f77-b2a4-db39a51de82f.png)
@@ -141,13 +148,47 @@ void loop() {
 }
 
 
-### servo motor with PCA9685 module rotate from 0 to 180 degrees and back  [see here](https://www.tinkercad.com/things/jBKW8pofJhZ-task-3-control-servo-motor-using-potentiometer/editel?sharecode=FqY5TjQ9On_IY1DgVje0gg_ci8Gl3PQnv6i9iKbzVOA)
-At begin
-![3](https://user-images.githubusercontent.com/64277741/122786908-75169c00-d2bd-11eb-9624-60cee51a1ea6.PNG)
-Figure (6): Five Servo Motor with Five Potentiometers
-
-After start simulation ![4](https://user-images.githubusercontent.com/64277741/122787141-b3ac5680-d2bd-11eb-97f9-08a8c668f9b1.PNG)
-Figure (7): Changing the angles of Servo Motors according to change the angles of Potentiometers
+### servo motor with PCA9685 module rotate from 0 to 90 degrees and to 120 degree  
+![Untitled Sketch 2_bb](https://user-images.githubusercontent.com/64277741/179158301-654cdd08-4170-4327-a87e-30ed303ab803.png)
 
 #### The Code 
+The sketch makes use of the Adafruit PWM Servo Driver Library which you will need to install to make this work.  It can be installed from the Library Manager in your Arduino IDE.
+
+#include <Wire.h>
+#include <Adafruit_PWMServoDriver.h>
+
+Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
+
+#define MIN_PULSE_WIDTH 650
+#define MAX_PULSE_WIDTH 2350
+#define DEFAULT_PULSE_WIDTH 1500
+#define FREQUENCY 50
+
+int servonum =0;
+
+void setup() 
+{ 
+Serial.begin(9600);
+Serial.println("16 channel Servo test!");
+pwm.begin();
+pwm.setPWMFreq(FREQUENCY);
+}
+int pulseWidth(int angle)
+{
+int pulse_wide, analog_value;
+pulse_wide = map(angle, 0, 180, MIN_PULSE_WIDTH, MAX_PULSE_WIDTH);
+analog_value = int(float(pulse_wide) / 1000000 * FREQUENCY * 4096);
+Serial.println(analog_value);
+return analog_value;
+}
+
+void loop() {
+pwm.setPWM(0, 0, pulseWidth(0));
+delay(1000);
+pwm.setPWM(0, 0, pulseWidth(90));
+delay(500);
+pwm.setPWM(0, 0, pulseWidth(120));
+delay(1000);
+
+}
 
