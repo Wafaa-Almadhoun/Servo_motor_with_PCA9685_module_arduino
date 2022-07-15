@@ -36,7 +36,7 @@ Project is created with:
 7. PCA9685 module 
 
 ## Connections
-Connection pins:
+
 ### 1. servo motor rotate from 0 to 90 degrees and back simulated with TINKERCAD circuit  .
   
      5V: Power (red) to servo 
@@ -79,39 +79,39 @@ After 30 ms
 Figure (2): Servo Motor at 90 degrees 
 
 #### The Code 
-#include <Servo.h>
+   #include <Servo.h>
 
-Servo myservo;  // create servo object to control a servo
+   Servo myservo;  // create servo object to control a servo
 
 
-int pos = 0;    // variable to store the servo position
+   int pos = 0;    // variable to store the servo position
 
-void setup() {
+   void setup() {
 
-  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
-}
+     myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+   }
 
-void loop() {
+   void loop() {
 
-  for (pos = 0; pos <= 90; pos += 1) { // goes from 0 degrees to 90 degrees
+     for (pos = 0; pos <= 90; pos += 1) { // goes from 0 degrees to 90 degrees
   
-    // in steps of 1 degree
+       // in steps of 1 degree
     
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
+       myservo.write(pos);              // tell servo to go to position in variable 'pos'
     
-    delay(30);                       // waits 30ms for the servo to reach the position
+       delay(30);                       // waits 30ms for the servo to reach the position
     
-  }
+     }
   
-  for (pos = 90; pos >= 0; pos -= 1) { // goes from 90 degrees to 0 degrees
+     for (pos = 90; pos >= 0; pos -= 1) { // goes from 90 degrees to 0 degrees
   
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
+       myservo.write(pos);              // tell servo to go to position in variable 'pos'
     
-    delay(30);                       // waits 30ms for the servo to reach the position
+       delay(30);                       // waits 30ms for the servo to reach the position
     
-  }
+     }
   
-}
+   }
 
 ### 2. servo motor Controlled by using Potentiometer simulated with TINKERCAD circuit .[see here ](https://www.tinkercad.com/things/bbagRhCJEr8-servo-motor-controlled-by-using-potentiometer/editel)
 
