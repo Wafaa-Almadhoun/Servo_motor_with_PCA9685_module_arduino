@@ -241,7 +241,8 @@ delay(1000);
 
 ### 4. servo motor with PCA9685 module  Controlled by using Potentiometer
 
-![Sketch  servo motor with PCA9685 module Controlled by using Potentiometer 2_bb](https://user-images.githubusercontent.com/64277741/179161772-121b9566-95d1-4b0b-9e70-b505945ecf0c.png)
+![66666 2_bb](https://user-images.githubusercontent.com/64277741/179317411-efdf871d-bea1-4f6a-ab3b-4dbc1677d271.png)
+
 
 #### The code
 
