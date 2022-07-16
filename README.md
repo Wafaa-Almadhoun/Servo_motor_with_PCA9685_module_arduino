@@ -1,6 +1,4 @@
 # wafaa-almadhoun-servo_motor_with_PCA9685_module_using_Arduino_UNO_R3_
-electronic path week 2 task
-
 
 ## Table of contents
 * [Introduction](#Introduction)
