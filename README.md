@@ -1,4 +1,4 @@
-# wafaa-almadhoun-servo_motor_with_PCA9685_module_using_Arduino_UNO_R3_
+# Servo_motor_with_PCA9685_module_using_Arduino_UNO_R3_
 
 ## Table of contents
 * [Introduction](#Introduction)
